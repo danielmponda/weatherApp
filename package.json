@@ -4,7 +4,18 @@
   "description": "\u0016Web-based weather application with features such as :  weather map service, hourly and daily forecast.  ",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "lint": "eslint src/**/*.js",
+    "lint:fix": "prettier src/**/*.js --write",
+    "dev": "rm -rf ./development && rm -rf ./.cache && parcel src/index.html --out-dir development -p 3000",
+    "build": "parcel build src/index.html --out-dir dist --public-url ./"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.js": "npm run lint:fix"
   },
   "repository": {
     "type": "git",
@@ -15,5 +26,17 @@
   "bugs": {
     "url": "https://github.com/danielmponda/weatherApp/issues"
   },
-  "homepage": "https://github.com/danielmponda/weatherApp#readme"
+  "homepage": "https://github.com/danielmponda/weatherApp#readme",
+  "devDependencies": {
+    "eslint": "^7.1.0",
+    "eslint-config-standard": "^14.1.1",
+    "eslint-plugin-import": "^2.20.2",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-standard": "^4.0.1"
+  },
+  "dependencies": {
+    "husky": "^4.2.5",
+    "lint-staged": "^10.2.7"
+  }
 }
