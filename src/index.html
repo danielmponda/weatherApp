@@ -1,0 +1,675 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body class="homepage bgimage">
+    <!-- Main Container -->
+    <div class="container scroller">
+      <!-- Header -->
+      <header>
+        <nav>
+          <div class="menu-btn">
+            <div class="btn-line"></div>
+            <div class="btn-line"></div>
+            <div class="btn-line"></div>
+          </div>
+
+          <div class="logo">
+            <!-- <a href="./index.html"> -->
+            <h1>
+              weather<span><b>m</b>an</span>
+            </h1>
+            <!-- </a> -->
+          </div>
+
+          <div class="search-bar">
+            <input
+              type="text"
+              placeholder="search..."
+              name=""
+              id=""
+              autocapitalize="off"
+            />
+            <button
+              type="submit"
+              name="submit"
+              class="fa fa-search search-btn"
+            ></button>
+          </div>
+
+          <div class="menu">
+            <ul class="menu-nav">
+              <li class="nav-item">
+                <a href="index.html" class="nav-link current">Home</a>
+              </li>
+              <li class="nav-item">
+                <a href="about.html" class="nav-link">About</a>
+              </li>
+              <li class="nav-item">
+                <a href="contact.html" class="nav-link">Contact</a>
+              </li>
+              <li class="nav-item">
+                <a href="map.html" class="nav-link">Maps</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </header>
+      <!-- Main Content -->
+      <main>
+        <div class="current-items">
+          <section class="today-current">
+            <div class="heading">
+              <div class="city">
+                <i class="fas fa-map-marker-alt location-icon"></i>
+                <b class="cityname">Africa/Blantyre</b>
+              </div>
+              <div class="date">Saturday, 4th April 2020</div>
+              <div class="time">7:32:39 PM</div>
+            </div>
+
+            <div class="temp">
+              <div class="weather-wrapper">
+                <i class="fas fa-cloud-sun-rain temp-weather-icon"></i>
+              </div>
+              <div class="temp-wrapper">
+                <b class="temp-value">15</b>
+                <i class="symb">°</i>
+              </div>
+              <i class="temp-symb .noselect">F</i>
+              <i class="temp-symb-sector .noselect">C</i>
+            </div>
+
+            <div class="weather">
+              <div class="underborder"></div>
+              <div class="weather-desc">clear skys</div>
+            </div>
+
+            <div class="weather-more-info">
+              <div class="first-info">
+                <div>
+                  <i class="fas fa-thermometer-three-quarters colour"></i> Feels
+                  Like: <b class="humidity">69</b> °
+                </div>
+              </div>
+              <div class="first-info">
+                <div>
+                  <i class="fas fa-tint colour"></i> Humidity:
+                  <b class="humidity">83</b> %
+                </div>
+                <div>
+                  <i class="fas fa-meteor colour"> </i>Pressure:
+                  <b class="pressure">1016</b>mb
+                </div>
+              </div>
+              <div class="second-info">
+                <div>
+                  <i class="fas fa-wind colour"></i> Wind Spend:
+                  <b class="windSpend">4 </b> mph
+                </div>
+                <div>
+                  <i class="fas fa-water colour"></i> Visibility:
+                  <b class="visibility">10</b>mi
+                </div>
+              </div>
+              <div class="second-info">
+                <div>
+                  <i class="fas fa-thermometer-empty colour"></i> dewPoint:
+                  <b class="visibility">63</b>°
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+
+        <div class="daily-items">
+          <div class="daily-heading">Daily</div>
+          <section class="daily-items-container scroller">
+            <div class="eachDay selector">
+              <i class="hiddentime noClick"> 1585951200</i>
+              <div class="noClick">4th Apr</div>
+              <i class="fas fa-cloud-sun day-weather-icon"></i>
+              <div class="daily-temp-wrapper noClick">
+                <i class="day-temp-value">82</i>
+                <i class="day-temp-symb">°</i>
+              </div>
+              <i class="noClick daily-summary">partly-cloudy-day</i>
+            </div>
+
+            <div class="eachDay selector">
+              <i class="hiddentime noClick"> 1586037600</i>
+              <div class="noClick">5th Apr</div>
+              <i class="fas fa-sun sun day-weather-icon"></i>
+              <div class="daily-temp-wrapper noClick">
+                <i class="day-temp-value">84</i>
+                <i class="day-temp-symb">°</i>
+              </div>
+              <div class="noClick daily-summary">clear-day</div>
+            </div>
+
+            <div class="eachDay selector">
+              <i class="hiddentime noClick"> 1586124000</i>
+              <div class="noClick">6th Apr</div>
+              <i class="fas fa-sun sun day-weather-icon"></i>
+              <div class="daily-temp-wrapper noClick">
+                <i class="day-temp-value">85</i>
+                <i class="day-temp-symb">°</i>
+              </div>
+              <div class="noClick">clear-day</div>
+            </div>
+
+            <div class="eachDay selector">
+              <i class="hiddentime noClick"> 1586210400</i>
+              <div class="noClick">7th Apr</div>
+              <i class="fas fa-cloud-rain blue day-weather-icon"></i>
+              <div class="daily-temp-wrapper noClick">
+                <i class="day-temp-value">85</i>
+                <i class="day-temp-symb">°</i>
+              </div>
+              <div class="noClick">rain</div>
+            </div>
+
+            <div class="eachDay selector">
+              <i class="hiddentime noClick"> 1586296800</i>
+              <div class="noClick">8th Apr</div>
+              <i class="fas fa-cloud-rain blue day-weather-icon"></i>
+              <div class="daily-temp-wrapper noClick">
+                <i class="day-temp-value">83</i>
+                <i class="day-temp-symb">°</i>
+              </div>
+              <div class="noClick">rain</div>
+            </div>
+
+            <div class="eachDay selector">
+              <i class="hiddentime noClick"> 1586383200</i>
+              <div class="noClick">9th Apr</div>
+              <i class="fas fa-cloud-rain blue day-weather-icon"></i>
+              <div class="daily-temp-wrapper noClick">
+                <i class="day-temp-value">79</i>
+                <i class="day-temp-symb">°</i>
+              </div>
+              <div class="noClick">rain</div>
+            </div>
+
+            <div class="eachDay selector">
+              <i class="hiddentime noClick"> 1586469600</i>
+              <div class="noClick">10th Apr</div>
+              <i class="fas fa-cloud-sun day-weather-icon"></i>
+              <div class="daily-temp-wrapper noClick">
+                <i class="day-temp-value">82</i>
+                <i class="day-temp-symb">°</i>
+              </div>
+              <div class="noClick">partly-cloudy-day</div>
+            </div>
+
+            <div class="eachDay selector">
+              <i class="hiddentime noClick"> 1586556000</i>
+              <div class="noClick">11th Apr</div>
+              <i class="fas fa-sun sun day-weather-icon"></i>
+              <div class="daily-temp-wrapper noClick">
+                <i class="day-temp-value">84</i>
+                <i class="day-temp-symb">°</i>
+              </div>
+              <div class="noClick">clear-day</div>
+            </div>
+          </section>
+        </div>
+
+        <div class="hourly-items">
+          <div class="hourly-heading">Hourly</div>
+          <!-- <div class="hourly-date"> Hourly </div> -->
+
+          <section class="hourly-items-container scroller">
+            <div class="eachHour">
+              <div>12:00 AM</div>
+              <i class="fas fa-moon nyt hour-weather-icon"> </i>
+
+              <div class="hourly-temp-wrapper">
+                <i class="hour-temp-value">67</i>
+                <i class="hour-temp-symb">°</i>
+              </div>
+
+              <div class="daily-summary">Clear</div>
+            </div>
+
+            <div class="eachHour">
+              <div>1:00 AM</div>
+              <i class="fas fa-moon nyt hour-weather-icon"> </i>
+
+              <div class="hourly-temp-wrapper">
+                <i class="hour-temp-value">66</i>
+                <i class="hour-temp-symb">°</i>
+              </div>
+
+              <div class="daily-summary">Clear</div>
+            </div>
+
+            <div class="eachHour">
+              <div>2:00 AM</div>
+              <i class="fas fa-moon nyt hour-weather-icon"> </i>
+
+              <div class="hourly-temp-wrapper">
+                <i class="hour-temp-value">66</i>
+                <i class="hour-temp-symb">°</i>
+              </div>
+
+              <div class="daily-summary">Clear</div>
+            </div>
+
+            <div class="eachHour">
+              <div>3:00 AM</div>
+              <i class="fas fa-moon nyt hour-weather-icon"> </i>
+
+              <div class="hourly-temp-wrapper">
+                <i class="hour-temp-value">65</i>
+                <i class="hour-temp-symb">°</i>
+              </div>
+
+              <div class="daily-summary">Clear</div>
+            </div>
+
+            <div class="eachHour">
+              <div>4:00 AM</div>
+              <i class="fas fa-cloud-moon nyt hour-weather-icon"> </i>
+
+              <div class="hourly-temp-wrapper">
+                <i class="hour-temp-value">64</i>
+                <i class="hour-temp-symb">°</i>
+              </div>
+
+              <div class="daily-summary">Partly Cloudy</div>
+            </div>
+
+            <div class="eachHour">
+              <div>5:00 AM</div>
+              <i class="fas fa-cloud-moon nyt hour-weather-icon"> </i>
+
+              <div class="hourly-temp-wrapper">
+                <i class="hour-temp-value">64</i>
+                <i class="hour-temp-symb">°</i>
+              </div>
+
+              <div class="daily-summary">Mostly Cloudy</div>
+            </div>
+
+            <div class="eachHour">
+              <div>6:00 AM</div>
+              <i class="fas fa-cloud hour-weather-icon"> </i>
+
+              <div class="hourly-temp-wrapper">
+                <i class="hour-temp-value">65</i>
+                <i class="hour-temp-symb">°</i>
+              </div>
+
+              <div class="daily-summary">Mostly Cloudy</div>
+            </div>
+
+            <div class="eachHour">
+              <div>7:00 AM</div>
+              <i class="fas fa-cloud hour-weather-icon"> </i>
+
+              <div class="hourly-temp-wrapper">
+                <i class="hour-temp-value">68</i>
+                <i class="hour-temp-symb">°</i>
+              </div>
+
+              <div class="daily-summary">Mostly Cloudy</div>
+            </div>
+
+            <div class="eachHour">
+              <div>8:00 AM</div>
+              <i class="fas fa-cloud hour-weather-icon"> </i>
+
+              <div class="hourly-temp-wrapper">
+                <i class="hour-temp-value">71</i>
+                <i class="hour-temp-symb">°</i>
+              </div>
+
+              <div class="daily-summary">Mostly Cloudy</div>
+            </div>
+
+            <div class="eachHour">
+              <div>9:00 AM</div>
+              <i class="fas fa-cloud-sun hour-weather-icon"> </i>
+
+              <div class="hourly-temp-wrapper">
+                <i class="hour-temp-value">74</i>
+                <i class="hour-temp-symb">°</i>
+              </div>
+
+              <div class="daily-summary">Partly Cloudy</div>
+            </div>
+
+            <div class="eachHour">
+              <div>10:00 AM</div>
+              <i class="fas fa-sun sun hour-weather-icon"> </i>
+
+              <div class="hourly-temp-wrapper">
+                <i class="hour-temp-value">77</i>
+                <i class="hour-temp-symb">°</i>
+              </div>
+
+              <div class="daily-summary">Clear</div>
+            </div>
+
+            <div class="eachHour">
+              <div>11:00 AM</div>
+              <i class="fas fa-sun sun hour-weather-icon"> </i>
+
+              <div class="hourly-temp-wrapper">
+                <i class="hour-temp-value">80</i>
+                <i class="hour-temp-symb">°</i>
+              </div>
+
+              <div class="daily-summary">Clear</div>
+            </div>
+
+            <div class="eachHour">
+              <div>12:00 PM</div>
+              <i class="fas fa-sun sun hour-weather-icon"> </i>
+
+              <div class="hourly-temp-wrapper">
+                <i class="hour-temp-value">81</i>
+                <i class="hour-temp-symb">°</i>
+              </div>
+
+              <div class="daily-summary">Clear</div>
+            </div>
+
+            <div class="eachHour">
+              <div>1:00 PM</div>
+              <i class="fas fa-sun sun hour-weather-icon"> </i>
+
+              <div class="hourly-temp-wrapper">
+                <i class="hour-temp-value">84</i>
+                <i class="hour-temp-symb">°</i>
+              </div>
+
+              <div class="daily-summary">Clear</div>
+            </div>
+
+            <div class="eachHour">
+              <div>2:00 PM</div>
+              <i class="fas fa-sun sun hour-weather-icon"> </i>
+
+              <div class="hourly-temp-wrapper">
+                <i class="hour-temp-value">85</i>
+                <i class="hour-temp-symb">°</i>
+              </div>
+
+              <div class="daily-summary">Clear</div>
+            </div>
+
+            <div class="eachHour">
+              <div>3:00 PM</div>
+              <i class="fas fa-sun sun hour-weather-icon"> </i>
+
+              <div class="hourly-temp-wrapper">
+                <i class="hour-temp-value">84</i>
+                <i class="hour-temp-symb">°</i>
+              </div>
+
+              <div class="daily-summary">Clear</div>
+            </div>
+
+            <div class="eachHour">
+              <div>4:00 PM</div>
+              <i class="fas fa-sun sun hour-weather-icon"> </i>
+
+              <div class="hourly-temp-wrapper">
+                <i class="hour-temp-value">83</i>
+                <i class="hour-temp-symb">°</i>
+              </div>
+
+              <div class="daily-summary">Clear</div>
+            </div>
+
+            <div class="eachHour">
+              <div>5:00 PM</div>
+              <i class="fas fa-moon nyt hour-weather-icon"> </i>
+
+              <div class="hourly-temp-wrapper">
+                <i class="hour-temp-value">81</i>
+                <i class="hour-temp-symb">°</i>
+              </div>
+
+              <div class="daily-summary">Clear</div>
+            </div>
+
+            <div class="eachHour">
+              <div>6:00 PM</div>
+              <i class="fas fa-moon nyt hour-weather-icon"> </i>
+
+              <div class="hourly-temp-wrapper">
+                <i class="hour-temp-value">78</i>
+                <i class="hour-temp-symb">°</i>
+              </div>
+
+              <div class="daily-summary">Clear</div>
+            </div>
+
+            <div class="eachHour">
+              <div>7:00 PM</div>
+              <i class="fas fa-moon nyt hour-weather-icon"> </i>
+
+              <div class="hourly-temp-wrapper">
+                <i class="hour-temp-value">75</i>
+                <i class="hour-temp-symb">°</i>
+              </div>
+
+              <div class="daily-summary">Clear</div>
+            </div>
+
+            <div class="eachHour">
+              <div>8:00 PM</div>
+              <i class="fas fa-moon nyt hour-weather-icon"> </i>
+
+              <div class="hourly-temp-wrapper">
+                <i class="hour-temp-value">72</i>
+                <i class="hour-temp-symb">°</i>
+              </div>
+
+              <div class="daily-summary">Clear</div>
+            </div>
+
+            <div class="eachHour">
+              <div>9:00 PM</div>
+              <i class="fas fa-moon nyt hour-weather-icon"> </i>
+
+              <div class="hourly-temp-wrapper">
+                <i class="hour-temp-value">71</i>
+                <i class="hour-temp-symb">°</i>
+              </div>
+
+              <div class="daily-summary">Clear</div>
+            </div>
+
+            <div class="eachHour">
+              <div>10:00 PM</div>
+              <i class="fas fa-moon nyt hour-weather-icon"> </i>
+
+              <div class="hourly-temp-wrapper">
+                <i class="hour-temp-value">69</i>
+                <i class="hour-temp-symb">°</i>
+              </div>
+
+              <div class="daily-summary">Clear</div>
+            </div>
+
+            <div class="eachHour">
+              <div>11:00 PM</div>
+              <i class="fas fa-moon nyt hour-weather-icon"> </i>
+
+              <div class="hourly-temp-wrapper">
+                <i class="hour-temp-value">68</i>
+                <i class="hour-temp-symb">°</i>
+              </div>
+
+              <div class="daily-summary">Clear</div>
+            </div>
+          </section>
+        </div>
+
+        <div class="Details-items">
+          <div class="Details-items-container">
+            <div class="side-a">
+              <div class="side-artical row">
+                <!-- <div class="thigh">
+
+                              <div class="thigh-wrapper">
+                                  <div class="thigh-heading"> Highest Temp</div>
+                                  <div class="thigh-temp-wrapper ">
+                                      <b class="thigh-temp-value HighestTemp">15</b>
+                                      <i class="thigh-symb">°</i>
+                                  </div>
+                                  <div class="thigh-time highestemp-time">04:24 AM</div>
+                              </div>
+
+                              <div class="thigh-wrapper">
+                                <div class="thigh-heading"> Temperature </div>
+                                <div class="thigh-temp-wrapper ">
+                                    <b class="thigh-temp-value Nowtemperature">15</b>
+                                    <i class="thigh-symb">°</i>
+                                </div>
+                                <div class="thigh-time highestemp-time">Now</div>
+                            </div>
+
+                              <div class="thigh-wrapper">
+                                  <div class="thigh-heading Lowest">  Lowest Temp</div>
+                                  <div class="thigh-temp-wrapper ">
+                                      <b class="thigh-temp-value LowestTemp">15</b>
+                                      <i class="thigh-symb">°</i>
+                                  </div>
+                                  <div class="thigh-time LowestTempTime">04:24 AM</div>
+                              </div>
+                          </div> -->
+              </div>
+
+              <div class="side-artical row">
+                <!-- <div class="precip">
+                                  <div class="precip-wrapper">
+                                      <div class="precip-heading"> Precip Intensity</div>
+                                      <div class="precip-temp-wrapper">
+                                          <b class="precip-temp-value precipint">15</b>
+                                      </div>
+                                  </div>
+
+                                  <div class="precip-wrapper">
+                                      <div class="precip-heading"> Precip Max</div>
+                                      <div class="precip-temp-wrapper">
+                                          <b class="precip-temp-value precipMax">15</b>
+                                      </div>
+                                  </div>
+
+                                  <div class="precip-wrapper">
+                                      <div class="precip-heading"> Precip Probability</div>
+                                      <div class="precip-temp-wrapper">
+                                          <b class="precip-temp-value precipPro">15</b>
+                                          <i class="feelsluck-percentage">%</i>
+                                      </div>
+                                  </div>
+
+
+                              </div> -->
+              </div>
+            </div>
+
+            <div class="side-b">
+              <div>
+                <div class="sun-wrapper">
+                  <i class="fas fa-sun day sunrise"></i>
+                  <div>
+                    <i class="timesunrise">5:46 AM </i>
+                    <i class="timesunset">5:32 PM </i>
+                  </div>
+                </div>
+
+                <div class="inner-b">
+                  <div>
+                    <i class="timesunriselable">Sunrise</i>
+                    <i class="timesunsetlable">Sunset </i>
+                  </div>
+                  <!-- <i class="fas fa-moon sun sunset"></i> -->
+                </div>
+              </div>
+            </div>
+
+            <div class="side-c">
+              <div class="side-artical row">
+                <!-- <div class="feelsluck">
+                                  <div class="feelsluck-wrapper">
+                                      <div class="feelsluck-heading"> Feels Like</div>
+                                      <div class="feelsluck-temp-wrapper ">
+                                          <b class="feelsluck-temp-value feelsLike">15</b>
+                                          <i class="feelsluck-symb">°</i>
+                                      </div>
+
+                                  </div>
+
+                                  <div class="feelsluck-wrapper">
+                                      <div class="feelsluck-heading"> Humidity</div>
+                                      <div class="feelsluck-temp-wrapper">
+                                          <b class="feelsluck-temp-value detail-humidity">15</b>
+                                          <i class="feelsluck-percentage">%</i>
+                                      </div>
+                                  </div>
+
+                                  <div class="feelsluck-wrapper">
+                                      <div class="feelsluck-heading"> Visibility</div>
+                                      <div class="feelsluck-temp-wrapper">
+                                          <b class="feelsluck-temp-value detail-visibility">15</b>
+                                          <i class="feelsluck-percentage">+mi</i>
+
+                                      </div>
+
+                                  </div>
+
+
+                              </div> -->
+              </div>
+
+              <div class="side-artical row">
+                <!-- <div class="wind-pressure">
+                                  <div class="wind-pressure-wrapper" >
+                                      <div class="wind-pressure-heading"> Wind Speed</div>
+                                      <div class="wind-pressure-temp-wrapper">
+                                          <b class="wind-pressure-temp-value detail-windSpeed">15</b>
+                                          <i class="feelsluck-percentage">mph</i>
+
+                                      </div>
+
+                                  </div>
+
+                                  <div class="wind-pressure-wrapper">
+                                      <div class="wind-pressure-heading"> WindBearing</div>
+                                      <div class="wind-pressure-temp-wrapper">
+                                          <b class="wind-pressure-temp-value detail-windBearing">15</b>
+                                      </div>
+                                  </div>
+
+                                  <div class="wind-pressure-wrapper">
+                                      <div class="wind-pressure-heading"> WindGust</div>
+                                      <div class="wind-pressure-temp-wrapper">
+                                          <b class="wind-pressure-temp-value windGust">15</b>
+                                      </div>
+                                  <div class="thigh-time  ">miles per hour</div>
+                                  <div class="thigh-time windGustTime">04:24 AM</div>
+
+                                  </div>
+
+
+
+
+                            </div>
+                              -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+  </body>
+</html>
