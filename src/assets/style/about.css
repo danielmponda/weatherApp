@@ -1,0 +1,132 @@
+.about {
+  font-family: 'Lato', sans-serif;
+
+  line-height: 26px;
+  font-size: 18px;
+}
+.about-section-a {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  align-items: center;
+  text-align: justify;
+  min-width: 50px;
+  /* background-color: hotpink; */
+}
+
+.about-section-a .about-info {
+  order: 2;
+  min-width: 350px;
+  padding: 30px;
+  border-bottom: rgba(114, 114, 114, 0.322) 1px solid;
+}
+
+.about-section-a .about-info-svg {
+  order: 1;
+}
+
+.about-section-a .about-info-svg > img {
+  width: 360px;
+  height: 300px;
+}
+
+/* .about-svgimage{
+    width: 500px;
+    height: 900px;
+} */
+
+/* .about-sec-a-a{
+    max-width: 560px;
+    padding: 30px;
+} */
+
+.about-info .logo {
+  margin-bottom: 20px;
+}
+
+.about-info .logo h1 {
+  padding: 0px;
+  margin: auto;
+}
+
+main .about-section-b {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* height: 50%; */
+  /* background-color: tomato; */
+  width: 90%;
+  max-width: 780px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid rgba(220, 220, 220, 0.226);
+  line-height: 25px;
+}
+
+main .about-section-c {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* height: 50%; */
+  /* background-color: tomato; */
+  /* width: 90%; */
+  max-width: 880px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid rgba(220, 220, 220, 0.226);
+}
+
+.section-a-side-a {
+  flex: 1;
+  order: 2;
+}
+
+.section-a-side-b {
+  flex: 1;
+  order: 1;
+}
+
+.section-a-side-b img {
+  width: 250px;
+  height: 300px;
+  border-radius: 100%;
+  opacity: 0.7;
+}
+
+/* .about-dev-img{
+    width: 60px;
+    height: 100px;
+    border-radius: 100%;
+
+} */
+
+.about-section-d {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  text-align: center;
+  align-items: center;
+  text-align: justify;
+  min-width: 50px;
+  /* background-color: hotpink; */
+}
+.about-section-d .logo {
+  padding: 0;
+  margin: 0;
+}
+.about-section-d .about-dev-info {
+  order: 2;
+  min-width: 350px;
+  padding: 30px;
+  /* border-bottom: rgba(167, 167, 167, 0.322) 1px solid; */
+}
+
+.about-section-d .about-dev-img {
+  order: 1;
+}
+
+.about-section-d .about-dev-img > img {
+  width: 260px;
+  height: 250px;
+  border-radius: 50%;
+}
