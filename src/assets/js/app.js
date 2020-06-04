@@ -1,4 +1,5 @@
 import { method } from './methods'
+import { output } from './outputs'
 
 let theCityName, glat, glon
 
@@ -76,9 +77,35 @@ function displayResults(city) {
   cityName[1].innerText = `${city.name}, ${city.sys.country}`
   darkSkyResults(lat, lon)
 
+  // send city coords to the OpenlayerMap
   try {
     if (document.querySelector('.openlayer-map')) {
       OpenlayerMap(lon, lat)
     }
   } catch (e) {}
+}
+
+// 05 Fetch new data using the darkskyApi
+function darkSkyResults(lat, lon) {
+  // Forecast Request : returns the current weather forecast for the next week.
+  const proxy = 'https://cors-anywhere.herokuapp.com/'
+  fetch(`${proxy}${method.darkSky.baseurl}${method.darkSky.key}/${lat},${lon}`)
+    .then(function (darkSkyweather) {
+      return darkSkyweather.json()
+    })
+    .then(displaydarkSkyResults)
+}
+
+function displaydarkSkyResults(city) {
+  //  console.log(city)
+  // if theCityName is searched/set do nothing else display city.timezone
+  theCityName
+    ? ''
+    : (cityName[0].innerText = city.timezone)(
+        (cityName[1].innerText = city.timezone)
+      )
+  // theCityName ? cityName.innerText = "city" : "";
+  output.currentItems(city)
+  output.dailyItems(city.daily)
+  hourcaller(city.currently.time)
 }
