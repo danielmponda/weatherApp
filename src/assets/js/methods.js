@@ -1,4 +1,13 @@
 export const method = {
+  openWeatherApi: {
+    key: '447f1d6cf3daf022a03b061d37cb17d7',
+    baseurl: 'https://api.openweathermap.org/data/2.5/',
+  },
+
+  darkSky: {
+    key: '82230a13a430556496b2eaa6e79d0ee7',
+    baseurl: 'https://api.darksky.net/forecast/',
+  },
   showMenu: false,
   // console.log(showMenu)
   toggleMenu: function () {
