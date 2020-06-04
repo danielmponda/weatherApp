@@ -23,3 +23,22 @@ function openWeatherCoords(lat, lon) {
     })
     .then(displayResults)
 }
+
+// Get Input Search and Add keypress EventListener
+let searchBtn = null
+searchBtn = document.querySelector('.search-btn')
+searchBtn.addEventListener('click', searchGetResults)
+
+function searchGetResults() {
+  // alert(searchinput.value);
+  let query = searchinput.value
+  query
+    ? fetch(
+        `${method.openWeatherApi.baseurl}weather?q=${query}&units=metric&APPID=${method.openWeatherApi.key}`
+      )
+        .then(function (weather) {
+          return weather.json()
+        })
+        .then(displayResults)
+    : ''
+}
