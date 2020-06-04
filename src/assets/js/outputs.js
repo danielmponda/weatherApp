@@ -146,4 +146,44 @@ export const output = {
 
     document.querySelector('.daily-items-container').innerHTML = output
   },
+  hourlyItems: function (hforecast) {
+    const offset = hforecast.offset
+    const dailyForecast = hforecast.hourly.data
+    // console.log(dailyForecast)
+
+    // const hourlyDate = document.querySelector(".hourly-date")
+    // hourlyDate.innerText =  `${moment(moment.unix(time)).utc().utcOffset(offset).format('Do MMMM')}`;
+    let output = ''
+
+    for (let i = 0; i < dailyForecast.length; i++) {
+      const { time, summary, temperature } = dailyForecast[i]
+      // console.log(time);
+      output += `
+                <div class="eachHour">
+                  <div>${moment(moment.unix(time))
+                    .utc()
+                    .utcOffset(offset)
+                    .format('LT')}</div>
+                  <i class="${method.calcWeatherIcon(
+                    summary,
+                    time,
+                    offset
+                  )} hour-weather-icon"> </i>
+
+                  <div class="hourly-temp-wrapper">
+                    <i class="hour-temp-value">${Math.round(temperature)}</i>
+                    <i class="hour-temp-symb">°</i>
+                  </div>
+
+                  <div class="daily-summary">${summary}</div>
+
+              </div>
+              `
+    }
+
+    let thhh = (document.querySelector(
+      '.hourly-items-container'
+    ).innerHTML = output)
+    // console.log(dailyForecast);
+  },
 }
