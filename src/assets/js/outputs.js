@@ -113,4 +113,37 @@ export const output = {
 
     method.tempWeatherIcon(summary, time, offset)
   },
+  dailyItems: function (dforecast) {
+    // console.log(dforecast);
+    const weekforese = dforecast.data
+
+    let output = ''
+    weekforese.forEach((day) => {
+      let stg = day.icon
+      let summary = stg.replace(/-|day/gi, (x) => (x = ' ')).trim()
+      // console.log(summary);
+      output += `
+        <div class="eachDay selector">
+        <i class="hiddentime noClick"> ${day.time}</i>
+        <div class="noClick">${moment(moment.unix(day.time)).format(
+          'Do MMM'
+        )}</div>
+        <i class="${method.calcWeatherIcon(
+          summary,
+          1585731600,
+          2
+        )} day-weather-icon"></i>
+        <div class="daily-temp-wrapper noClick">
+            <i class="day-temp-value">${Math.round(day.temperatureHigh)}</i>
+            <i class="day-temp-symb">°</i>
+        </div>
+        <div class="noClick daily-summary">${
+          summary[0].toUpperCase() + summary.slice(1)
+        }</div>
+    </div>
+        `
+    })
+
+    document.querySelector('.daily-items-container').innerHTML = output
+  },
 }
