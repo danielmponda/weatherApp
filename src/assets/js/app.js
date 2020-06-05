@@ -109,3 +109,49 @@ function displaydarkSkyResults(city) {
   output.dailyItems(city.daily)
   hourcaller(city.currently.time)
 }
+
+// Onclick on the dailyItems
+const dayy = document.querySelector('.daily-items-container')
+dayy.addEventListener('click', selectDate)
+
+function selectDate(e) {
+  const date = e.target.firstElementChild.innerText
+  hourcaller(date)
+}
+
+function hourcaller(date) {
+  let day = document.querySelectorAll('.eachDay')
+  var eachDayArr = Array.prototype.slice.call(day)
+  // console.log(eachDayArr);
+
+  eachDayArr.forEach((element) => {
+    element.classList.remove('wow-im-learing')
+  })
+
+  let nowDay = eachDayArr.filter((element) => {
+    if (element.firstElementChild.innerText == date) {
+      return true
+    }
+  })
+
+  try {
+    if (nowDay) {
+      nowDay[0].classList.add('wow-im-learing')
+    }
+  } catch (e) {}
+
+  //  Time Machine Request : returns the observed or forecast weather conditions for a date in the past or future.
+  const proxy = 'https://cors-anywhere.herokuapp.com/'
+  fetch(
+    `${proxy}${method.darkSky.baseurl}${method.darkSky.key}/${glat},${glon},${date}`
+  )
+    .then(function (darkSkyweather) {
+      return darkSkyweather.json()
+    })
+    .then(setNewHourly)
+}
+
+function setNewHourly(newData) {
+  output.hourlyItems(newData)
+  output.detailsItems(newData)
+}
