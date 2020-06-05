@@ -8,6 +8,24 @@ export const method = {
     key: '82230a13a430556496b2eaa6e79d0ee7',
     baseurl: 'https://api.darksky.net/forecast/',
   },
+  tempWeatherIcon: (summary, time, offset) => {
+    let tempWeatherIconNote = document.querySelectorAll('.weather-wrapper')
+
+    let tempWeatherIcon = Array.from(tempWeatherIconNote)
+
+    tempWeatherIcon[0].innerHTML = `<i class=" ${method.calcWeatherIcon(
+      summary,
+      time,
+      offset
+    )} temp-weather-icon"></i>`
+
+    tempWeatherIcon[1].innerHTML = `<i class=" ${method.calcWeatherIcon(
+      summary,
+      time,
+      offset
+    )} temp-weather-icon"></i>`
+  },
+
   showMenu: false,
   // console.log(showMenu)
   toggleMenu: function () {
