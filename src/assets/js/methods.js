@@ -121,4 +121,16 @@ export const method = {
       //  console.log(showMenu)
     }
   },
+  tempSymbSector: document.querySelector('.temp-symb-sector'),
+  tempSymb: document.querySelector('.temp-symb'),
+
+  coverter: function () {
+    if (method.tempSymbSector.innerHTML == 'C') {
+      method.tempSymbSector.innerHTML = 'F'
+      method.tempSymb.innerHTML = 'C'
+    } else {
+      method.tempSymbSector.innerHTML = 'C'
+      method.tempSymb.innerHTML = 'F'
+    }
+  },
 }
