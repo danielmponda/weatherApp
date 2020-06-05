@@ -186,4 +186,111 @@ export const output = {
     ).innerHTML = output)
     // console.log(dailyForecast);
   },
+  detailsItems: function (ddatails) {
+    const offset = ddatails.offset
+
+    // console.log(ddatails)
+    const { temperature } = ddatails.currently
+
+    // console.log(ddatails.daily.data[0])
+
+    const {
+      sunriseTime,
+      sunsetTime,
+      temperatureHigh,
+      temperatureHighTime,
+      temperatureLow,
+      temperatureLowTime,
+      precipIntensity,
+      precipIntensityMax,
+      precipProbability,
+      uvIndex,
+      apparentTemperatureHigh,
+      humidity,
+      visibility,
+      windSpeed,
+      windBearing,
+      windGust,
+      windGustTime,
+    } = ddatails.daily.data[0]
+
+    // side b
+    const timesunrise = document.querySelector('.timesunrise')
+    timesunrise.innerText = `${moment(moment.unix(sunriseTime))
+      .utc()
+      .utcOffset(offset)
+      .format('LT')}`
+
+    const timesunset = document.querySelector('.timesunset')
+    timesunset.innerText = `${moment(moment.unix(sunsetTime))
+      .utc()
+      .utcOffset(offset)
+      .format('LT')}   `
+
+    // side a-1
+    const highestTemp = document.querySelector('.HighestTemp')
+    highestTemp.innerText = `${Math.round(temperatureHigh)}`
+
+    const highestTempTime = document.querySelector('.highestemp-time')
+    highestTempTime.innerText = `${moment(moment.unix(temperatureHighTime))
+      .utc()
+      .utcOffset(offset)
+      .format('LT')}`
+
+    const nowTemperature = document.querySelector('.Nowtemperature')
+    nowTemperature.innerText = `${Math.round(temperature)}`
+
+    const LowestTemp = document.querySelector('.LowestTemp')
+    LowestTemp.innerText = `${Math.round(temperatureLow)}`
+
+    const lowestTempTime = document.querySelector('.LowestTempTime')
+    lowestTempTime.innerText = `${moment(moment.unix(temperatureLowTime))
+      .utc()
+      .utcOffset(offset)
+      .format('LT')}`
+
+    // side a-2
+    const precipint = document.querySelector('.precipint')
+    precipint.innerText = `${precipIntensity}`
+
+    const precipMax = document.querySelector('.precipMax')
+    precipMax.innerText = `${precipIntensityMax}`
+
+    const precipPro = document.querySelector('.precipPro')
+    precipPro.innerText = `${precipProbability}`
+
+    const UVIndex = document.querySelector('.UVIndex')
+    UVIndex.innerText = `${uvIndex}`
+
+    //side c-1
+
+    const feelsLike = document.querySelector('.feelsLike')
+    feelsLike.innerText = `${Math.round(apparentTemperatureHigh)}`
+
+    const detailHumidity = document.querySelector('.detail-humidity')
+    detailHumidity.innerText = `${humidity * 100}`
+
+    const detailVisibility = document.querySelector('.detail-visibility')
+    detailVisibility.innerText = `${Math.round(visibility)}`
+
+    const UIndex = document.querySelector('.UV-Index')
+    UIndex.innerText = `${uvIndex}`
+
+    // side c-2
+
+    const detailWindSpeed = document.querySelector('.detail-windSpeed')
+    detailWindSpeed.innerText = `${Math.round(windSpeed)}`
+
+    const detailwindBearing = document.querySelector('.detail-windBearing')
+    detailwindBearing.innerText = `${windBearing}`
+
+    const detailWindGust = document.querySelector('.windGust')
+    detailWindGust.innerText = `${windGust}`
+
+    const detailWindGustTime = document.querySelector('.windGustTime')
+    detailWindGustTime.innerText = `${moment(moment.unix(windGustTime))
+      .utc()
+      .utcOffset(offset)
+      .format('LT')}`
+  },
 }
