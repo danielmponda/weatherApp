@@ -204,3 +204,26 @@ const OpenlayerMap = (lon, lat) => {
     openWeatherCoords(newcords[1], newcords[0])
   })
 }
+
+// Add a sticky to the nav bar
+window.onscroll = function () {
+  myFunction()
+}
+
+var header = document.querySelector('nav')
+var mainn = document.querySelector('main')
+var thesearchbar = document.querySelector('.search-bar')
+var sticky = header.offsetTop
+
+function myFunction() {
+  console.log(sticky)
+  console.log(window.pageYOffset)
+
+  if (window.pageYOffset > sticky) {
+    header.classList.add('sticky')
+    mainn.classList.add('fixer')
+  } else {
+    header.classList.remove('sticky')
+    mainn.classList.remove('fixer')
+  }
+}
