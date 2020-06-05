@@ -155,3 +155,52 @@ function setNewHourly(newData) {
   output.hourlyItems(newData)
   output.detailsItems(newData)
 }
+
+// OpenlayerMap
+
+const OpenlayerMap = (lon, lat) => {
+  // <div id="map" class="map">
+
+  const mapSection = document.querySelector('.map-section-a')
+  const empty = document.querySelector('.empty')
+
+  try {
+    if (document.querySelector('#map')) {
+      document
+        .querySelector('#map')
+        .parentNode.removeChild(document.querySelector('#map'))
+    }
+  } catch (e) {}
+
+  const mapholder = document.createElement('div')
+  mapholder.classList = 'map'
+  mapholder.id = 'map'
+
+  mapSection.insertBefore(mapholder, empty)
+
+  var map = new ol.Map({
+    // div target
+    target: 'map',
+    // layers
+    layers: [
+      new ol.layer.Tile({
+        source: new ol.source.OSM(),
+      }),
+    ],
+    // view
+    view: new ol.View({
+      center: ol.proj.fromLonLat([lon, lat]),
+      zoom: 10,
+    }),
+  })
+
+  map.on('click', function (e) {
+    // console.log(e.coordinate)
+    let lon = e.coordinate[0]
+    let lat = e.coordinate[1]
+    // console.log(lon,lat)
+    let newcords = ol.proj.transform([lon, lat], 'EPSG:3857', 'EPSG:4326')
+    // darkSkyResults(newcords[1], newcords[0] )
+    openWeatherCoords(newcords[1], newcords[0])
+  })
+}
