@@ -25,7 +25,67 @@ export const method = {
       offset
     )} temp-weather-icon"></i>`
   },
+  calcWeatherIcon: (summary, time, offset) => {
+    summary = summary.toLowerCase()
 
+    // console.log(summary)
+
+    const timeHour = moment(moment.unix(time))
+      .utc()
+      .utcOffset(offset)
+      .format('HH')
+    // moment(moment.unix(time)).format('HH');
+
+    if (timeHour > 5 && timeHour < 17) {
+      return summary == 'mostly cloudy'
+        ? 'fas fa-cloud day'
+        : summary == 'overcast'
+        ? 'fas fa-cloud-sun day'
+        : summary == 'clear'
+        ? 'fas fa-sun day'
+        : summary == 'partly cloudy'
+        ? 'fas fa-cloud-sun day'
+        : summary == 'cloudy'
+        ? 'fas fa-cloud day'
+        : summary == 'rain'
+        ? 'fas fa-cloud-rain blue'
+        : summary == 'snow'
+        ? 'fas fa-slowflake day'
+        : summary == 'sleet'
+        ? 'fas fa-cloud-meatball day'
+        : summary == 'wind'
+        ? 'fas fa-wind day'
+        : summary == 'fog'
+        ? 'fas fa-cloud-smog day'
+        : summary == 'humid'
+        ? 'fas fa-cloud day'
+        : 'fas fa-cloud-sun day'
+    } else {
+      return summary == 'mostly cloudy'
+        ? 'fas fa-cloud-moon nyt'
+        : summary == 'cvercast'
+        ? 'fas fa-cloud-moon nyt'
+        : summary == 'clear'
+        ? 'fas fa-moon nyt'
+        : summary == 'partly cloudy '
+        ? 'fas fa-cloud-moon nyt'
+        : summary == 'cloudy'
+        ? 'fas fa-cloud-moon nyt'
+        : summary == 'rain'
+        ? 'fas fa-cloud-moon-rain nyt'
+        : summary == 'snow'
+        ? 'fas fa-slowflake nyt'
+        : summary == 'sleet'
+        ? 'fas fa-cloud-meatball nyt'
+        : summary == 'wind'
+        ? 'fas fa-wind nyt'
+        : summary == 'fog'
+        ? 'fas fa-cloud-meatball nyt'
+        : summary == 'humid'
+        ? 'fas fa-cloud nyt'
+        : 'fas fa-cloud-moon nyt'
+    }
+  },
   showMenu: false,
   // console.log(showMenu)
   toggleMenu: function () {
