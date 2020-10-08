@@ -1,0 +1,10 @@
+footer{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    /* height: 200px; */
+    width: 100%;
+    /* background-color: rgba(58, 58, 58, 0.753); */
+    /* background-color: rgba(80, 79, 79, 0.753); */
+}
+
