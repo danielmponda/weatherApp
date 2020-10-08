@@ -244,3 +244,64 @@ function myFunction() {
     mainn.classList.remove('fixer')
   }
 }
+
+////////////////////////// firebaseConfig ////////////////////////
+/////////////////////////////////////////////////////////////////
+
+var firebaseConfig = {
+  apiKey: 'AIzaSyBe6Pw_F6hr2kywHS_FJXa5JrNZVYCyijU',
+  authDomain: 'portfoliocontactform-beb39.firebaseapp.com',
+  databaseURL: 'https://portfoliocontactform-beb39.firebaseio.com',
+  projectId: 'portfoliocontactform-beb39',
+  storageBucket: 'portfoliocontactform-beb39.appspot.com',
+  messagingSenderId: '87529637836',
+  appId: '1:87529637836:web:68b29936dab1e3e474ff69',
+}
+
+// Initialize Firebase
+firebase.initializeApp(firebaseConfig)
+
+////////////////////////// Contact Form /////////////////////////////////
+/////////////////////////////////////////////////////////////////////////
+
+// Conatact Form on Submit call submitFrom
+
+document.getElementById('contactform').addEventListener('submit', submitFrom)
+
+// function to get Input Value
+function getInputValue(id) {
+  return document.getElementById(id).value
+}
+
+function submitFrom(e) {
+  e.preventDefault()
+  console.log('hello')
+  var userName = getInputValue('userName')
+  var userEmail = getInputValue('userEmail')
+  var userMessage = getInputValue('userMessage')
+
+  console.log(userName, userEmail, userMessage)
+  // Send data to firebase
+  saveMessage(userName, userEmail, userMessage)
+
+  // reset form input
+  document.getElementById('contactform').reset()
+}
+
+////////////////////////// FireBase DB //////////////////////////
+/////////////////////////////////////////////////////////////////
+
+// Creating a table / Ref
+var messagesRef = firebase.database().ref('messages')
+
+// save message to firebase
+function saveMessage(name, email, message) {
+  // send data to table message
+  var newMessageRef = messagesRef.push()
+  // set data
+  newMessageRef.set({
+    name: name,
+    email: email,
+    message: message,
+  })
+}
