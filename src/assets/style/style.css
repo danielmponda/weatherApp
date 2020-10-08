@@ -142,8 +142,6 @@ body {
   }
 
   main .about-section-d {
-    /* height: 30vh; */
-    /* height: 300px; */
     flex-direction: row;
     justify-content: center;
     align-items: center;
@@ -155,6 +153,10 @@ body {
     /* margin-bottom: 70px; */
     /* background-color: rgba(138, 138, 138, 0.13); */
   }
+
+  /* .about-section-d div {
+    width: 30%;
+  } */
 
   .about-dev-info h1 {
     margin: 0;
@@ -171,15 +173,20 @@ body {
   .about-section-d .about-dev-info {
     flex: 1;
     order: 2;
-    max-width: 460px;
+    max-width: 560px;
     padding: 30px;
     border-bottom: none;
     /* align-self: start; */
     /* justify-content: start; */
+    margin-left: 50px;
   }
 
   .about-section-a .about-dev-img {
     flex: 2;
+  }
+
+  .about-section-a .about-dev-img {
+    width: 800px;
   }
 
   .about-section-a .about-dev-img > img {
@@ -193,14 +200,15 @@ body {
   /* ----------------------------------------------------------------------------- */
 
   .contact-info-svg > img {
+    margin-top: 50px;
     max-width: 530px;
-    height: 550px;
+    /* height: 550px; */
   }
-
+  /*
   .contact-b-info-svg > img {
     max-width: 530px;
     height: 550px;
-  }
+  } */
 
   /* ----------------------------------------------------------------------------- */
   /* ----------------------------------Map------------------------------------ */
@@ -212,6 +220,19 @@ body {
     height: 100%;
     width: 100%;
     padding: 50px;
+  }
+
+  .map {
+    flex: 1;
+    height: 542px;
+    position: relative;
+    -webkit-height: 493px;
+    z-index: 1;
+    width: 96%;
+  }
+
+  .openlayer-map .weather-report .weather {
+    margin-bottom: none;
   }
 
   /* .map-section-a .current-items {
