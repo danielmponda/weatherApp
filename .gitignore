@@ -2,3 +2,4 @@ node_modules
 development
 dist
 .cache
+src/assets/img
