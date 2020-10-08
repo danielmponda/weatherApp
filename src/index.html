@@ -966,34 +966,46 @@
                 />
               </div>
             </div>
-            <div class="contact-form">
-              <!-- <h2>Email Us</h2> -->
-              <div>
-                <label for="">Name</label>
-                <input type="text" name="name" />
-              </div>
-              <!-- <div>
+            <form id="contactform">
+              <div class="contact-form">
+                <!-- <h2>Email Us</h2> -->
+                <div>
+                  <label for="">Name</label>
+                  <input type="text" name="name" id="userName" />
+                </div>
+                <!-- <div>
                               <label for="">Company</label>
                               <input type="text" name="company">
                           </div> -->
-              <div>
-                <label for="">Email</label>
-                <input type="email" name="email" />
-              </div>
-              <!-- <div>
+                <div>
+                  <label for="">Email</label>
+                  <input type="email" name="email" id="userEmail" />
+                </div>
+                <!-- <div>
                               <label for="">Mobile Number</label>
                               <input type="text" name="mobile">
                           </div> -->
-              <div>
-                <label for="">Message</label>
-                <textarea type="text" name="Message" rows="5"></textarea>
+                <div>
+                  <label for="">Message</label>
+                  <textarea
+                    type="text"
+                    name="Message"
+                    id="userMessage"
+                    rows="5"
+                  ></textarea>
+                </div>
+                <div>
+                  <button
+                    type="text"
+                    name="Message"
+                    rows="5"
+                    class="submit-btn"
+                  >
+                    Send
+                  </button>
+                </div>
               </div>
-              <div>
-                <button type="text" name="Message" rows="5" class="submit-btn">
-                  Send
-                </button>
-              </div>
-            </div>
+            </form>
           </div>
         </div>
       </main>
@@ -1014,7 +1026,7 @@
     </div>
     </footer>   -->
     </div>
-
+    <script src="https://www.gstatic.com/firebasejs/7.19.1/firebase.js"></script>
     <script src="assets/js/app.js"></script>
     <script>
       $(function () {
