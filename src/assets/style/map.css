@@ -1,0 +1,64 @@
+/* Map */
+.openlayer-map {
+  max-height: height 100vh;
+}
+
+.map-section-a {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+}
+
+/* /////////////SECTION A/////////////////////////// */
+/* ///////////////////////////////////////////////// */
+
+.weather-report {
+  flex: 2;
+  max-width: 400px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  /* display: none; */
+}
+/* .weather-report .current-items {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+} */
+
+.weather-report .current-items {
+  order: 1;
+}
+.weather-report .daily-items {
+  order: 2;
+  display: none;
+}
+.weather-report .weather-more-info {
+  display: none;
+}
+
+.openlayer-map .weather-report .weather {
+  /* color: brown; */
+  margin-bottom: -50px;
+}
+
+/* /////////////SECTION 2/////////////////////////// */
+/* ///////////////////////////////////////////////// */
+.map {
+  flex: 1;
+  height: 257px;
+  position: relative;
+  -webkit-height: 493px;
+  z-index: 1;
+  width: 96%;
+}
+
+.map:active {
+  cursor: pointer;
+}
