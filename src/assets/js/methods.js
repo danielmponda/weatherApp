@@ -1,3 +1,4 @@
+import moment from 'moment'
 export const method = {
   openWeatherApi: {
     key: '447f1d6cf3daf022a03b061d37cb17d7',
@@ -24,6 +25,25 @@ export const method = {
       time,
       offset
     )} temp-weather-icon"></i>`
+  },
+  animateValue: (id, start, end, duration) => {
+    let range = end - start
+    let current = start
+    let increment = end > start ? 1 : -1
+    let stepTime = Math.abs(Math.floor(duration / range))
+
+    let objNode = document.querySelectorAll(id)
+    let obj = Array.from(objNode)
+
+    let timer = setInterval(function () {
+      current += increment
+      obj[0].innerHTML = current
+      obj[1].innerHTML = current
+
+      if (current == end) {
+        clearInterval(timer)
+      }
+    }, stepTime)
   },
   calcWeatherIcon: (summary, time, offset) => {
     summary = summary.toLowerCase()
