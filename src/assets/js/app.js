@@ -305,3 +305,42 @@ function saveMessage(name, email, message) {
     message: message,
   })
 }
+
+////////////////////////// Menu /////////////////////////////////
+/////////////////////////////////////////////////////////////////
+
+const menuBtn = document.querySelector('.menu-btn') // Menu Button
+const menu = document.querySelector('.menu') // Menu Wrapper
+const menuNav = document.querySelector('.menu-nav') // Nav Section
+const navItems = document.querySelectorAll('.nav-item') // Nav List
+
+// Set Initail State of Menu
+let showMenu = false
+
+const toggleMenu = () => {
+  if (!showMenu) {
+    menuBtn.classList.add('close')
+    menu.classList.add('show')
+    menuNav.classList.add('show')
+    menu.classList.add('show')
+    navItems.forEach((item) => item.classList.add('show'))
+
+    showMenu = true // Set Menu Off
+  } else {
+    menuBtn.classList.remove('close')
+    menu.classList.remove('show')
+    menuNav.classList.remove('show')
+    menu.classList.remove('show')
+    navItems.forEach((item) => item.classList.remove('show'))
+
+    showMenu = false // Set Menu On
+  }
+}
+
+// Menu Button Onclick call toggleMenu
+menuBtn.addEventListener('click', toggleMenu)
+
+// On click on each link also call toggleMenu
+navItems.forEach((item) =>
+  item.firstElementChild.addEventListener('click', toggleMenu)
+)
