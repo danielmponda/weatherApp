@@ -3,7 +3,7 @@ import { method } from './methods'
 
 export const output = {
   currentItems: function (city) {
-    console.log(city)
+    // console.log(city)
     const {
       temperature,
       summary,
@@ -20,7 +20,7 @@ export const output = {
 
     let localDateNote = document.querySelectorAll('.date')
     let localDate = Array.from(localDateNote)
-    console.log(localDate)
+    // console.log(localDate)
 
     localDate[0].innerText = `${moment(moment.unix(time))
       .utc()
@@ -192,7 +192,7 @@ export const output = {
     // console.log(ddatails)
     const { temperature } = ddatails.currently
 
-    // console.log(ddatails.daily.data[0])
+    console.log(ddatails.daily.data[0])
 
     const {
       sunriseTime,
@@ -215,6 +215,8 @@ export const output = {
     } = ddatails.daily.data[0]
 
     // side b
+    console.log(windGust)
+    /////////////////SUNSET////////////////////////////
     const timesunrise = document.querySelector('.timesunrise')
     timesunrise.innerText = `${moment(moment.unix(sunriseTime))
       .utc()
@@ -227,6 +229,8 @@ export const output = {
       .utcOffset(offset)
       .format('LT')}   `
 
+    /////////////////SUNSET////////////////////////////
+
     // side a-1
     const highestTemp = document.querySelector('.HighestTemp')
     highestTemp.innerText = `${Math.round(temperatureHigh)}`
@@ -237,8 +241,8 @@ export const output = {
       .utcOffset(offset)
       .format('LT')}`
 
-    const nowTemperature = document.querySelector('.Nowtemperature')
-    nowTemperature.innerText = `${Math.round(temperature)}`
+    // const nowTemperature = document.querySelector('.Nowtemperature')
+    // nowTemperature.innerText = `${Math.round(temperature)}`
 
     const LowestTemp = document.querySelector('.LowestTemp')
     LowestTemp.innerText = `${Math.round(temperatureLow)}`
@@ -249,43 +253,48 @@ export const output = {
       .utcOffset(offset)
       .format('LT')}`
 
+    /////////////////////////////////////////////////////////
+
     // side a-2
     const precipint = document.querySelector('.precipint')
     precipint.innerText = `${precipIntensity}`
 
-    const precipMax = document.querySelector('.precipMax')
-    precipMax.innerText = `${precipIntensityMax}`
+    // const precipMax = document.querySelector('.precipMax')
+    // precipMax.innerText = `${precipIntensityMax}`
 
     const precipPro = document.querySelector('.precipPro')
     precipPro.innerText = `${precipProbability}`
 
-    const UVIndex = document.querySelector('.UVIndex')
-    UVIndex.innerText = `${uvIndex}`
+    // const UVIndex = document.querySelector('.UVIndex')
+    // UVIndex.innerText = `${uvIndex}`
 
     //side c-1
+    /////////////////////////////////////////////////////////
 
     const feelsLike = document.querySelector('.feelsLike')
     feelsLike.innerText = `${Math.round(apparentTemperatureHigh)}`
 
-    const detailHumidity = document.querySelector('.detail-humidity')
-    detailHumidity.innerText = `${humidity * 100}`
+    // const detailHumidity = document.querySelector('.detail-humidity')
+    // detailHumidity.innerText = `${humidity * 100}`
 
     const detailVisibility = document.querySelector('.detail-visibility')
     detailVisibility.innerText = `${Math.round(visibility)}`
 
-    const UIndex = document.querySelector('.UV-Index')
-    UIndex.innerText = `${uvIndex}`
+    // const UIndex = document.querySelector('.UV-Index')
+    // UIndex.innerText = `${uvIndex}`
 
     // side c-2
+    /////////////////////////////////////////////////////////
 
     const detailWindSpeed = document.querySelector('.detail-windSpeed')
     detailWindSpeed.innerText = `${Math.round(windSpeed)}`
 
-    const detailwindBearing = document.querySelector('.detail-windBearing')
-    detailwindBearing.innerText = `${windBearing}`
+    // const detailwindBearing = document.querySelector('.detail-windBearing')
+    // detailwindBearing.innerText = `${windBearing}`
 
     const detailWindGust = document.querySelector('.windGust')
     detailWindGust.innerText = `${windGust}`
+    console.log(windGust)
 
     const detailWindGustTime = document.querySelector('.windGustTime')
     detailWindGustTime.innerText = `${moment(moment.unix(windGustTime))
