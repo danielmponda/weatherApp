@@ -1,9 +1,14 @@
 import { method } from './methods'
 import { output } from './outputs'
 
+// State
 let theCityName, glat, glon
+// used for both city and zonetime
+let cityNameNode = document.querySelectorAll('.cityname')
 
+let cityName = Array.from(cityNameNode)
 /////////////////////////////////////////////////////////////////////////////////
+
 // 01 get location cords from the local machine
 window.addEventListener('load', () => {
   // console.log(navigator.geolocation)
@@ -18,6 +23,9 @@ window.addEventListener('load', () => {
   }
 })
 
+////////////////Search By Auto geolocation/////////////////
+///////////////////////////////////////////////////////////
+
 // 02 On window load Access lat & lon geolocation and fetch data from openWeatherApi and sent it to displayResults
 function openWeatherCoords(lat, lon) {
   fetch(
@@ -29,6 +37,9 @@ function openWeatherCoords(lat, lon) {
     })
     .then(displayResults)
 }
+
+////////////////Search By Input onClick/////////////////////
+///////////////////////////////////////////////////////////
 
 // 03 Get Input Search and Add keypress EventListener
 let searchBtn = null
@@ -49,6 +60,9 @@ function searchGetResults() {
     : ''
 }
 
+////////////////Search By Input on Enter //////////////////
+///////////////////////////////////////////////////////////
+
 // Get Input Search and Add keypress EventListener
 const searchinput = document.querySelector('input')
 searchinput.addEventListener('keypress', getResults)
@@ -65,6 +79,9 @@ function getResults(e) {
     })
     .then(displayResults)
 }
+
+////////////////Search By Input on Enter //////////////////
+///////////////////////////////////////////////////////////
 
 // 04 Access City's Coord using data from openWeatherApi and send it to darkSkyResults
 function displayResults(city) {
@@ -216,8 +233,8 @@ var thesearchbar = document.querySelector('.search-bar')
 var sticky = header.offsetTop
 
 function myFunction() {
-  console.log(sticky)
-  console.log(window.pageYOffset)
+  // console.log(sticky)
+  // console.log(window.pageYOffset)
 
   if (window.pageYOffset > sticky) {
     header.classList.add('sticky')
