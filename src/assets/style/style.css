@@ -87,6 +87,7 @@ body {
   }
   .weather-report .weather-more-info {
     display: flex;
+    margin-top: 20px;
   }
   .weather-report .daily-items {
     display: block;
