@@ -1,3 +1,5 @@
+/* eslint-disable */
+
 import moment from 'moment'
 import { method } from './methods'
 

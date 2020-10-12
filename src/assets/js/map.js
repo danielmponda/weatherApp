@@ -1,3 +1,5 @@
+/* eslint-disable */
+
 // import 'ol/ol.css';
 // import * as ol from 'ol';
 // import TileLayer from 'ol/layer/Tile';

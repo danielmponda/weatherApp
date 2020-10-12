@@ -1,12 +1,14 @@
+/* eslint-disable */
+
 import { method } from './methods'
 import { output } from './outputs'
 
 // State
 let theCityName, glat, glon
 // used for both city and zonetime
-let cityNameNode = document.querySelectorAll('.cityname')
+const cityNameNode = document.querySelectorAll('.cityname')
 
-let cityName = Array.from(cityNameNode)
+const cityName = Array.from(cityNameNode)
 /////////////////////////////////////////////////////////////////////////////////
 
 // 01 get location cords from the local machine
@@ -48,7 +50,7 @@ searchBtn.addEventListener('click', searchGetResults)
 
 function searchGetResults() {
   // alert(searchinput.value);
-  let query = searchinput.value
+  const query = searchinput.value
   query
     ? fetch(
         `${method.openWeatherApi.baseurl}weather?q=${query}&units=metric&APPID=${method.openWeatherApi.key}`
